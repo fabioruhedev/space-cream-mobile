@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Palanquin&family=Staatliches&display=swap");
+
+:root {
+  /* Fonts */
+  font-size: 62.5%;
+  --ff-title: "Staatliches", cursive;
+  --ff-text: "Palanquin", sans-serif;
+  /* Colors */
+  --color-text: #23053a;
+  --color-text-card: #4a4e69;
+  --bg-main: #eff1ff;
+  --bg-header: #8e9aaf;
+  --bg-card-text: #feeafa;
+}
+body {
+  margin-top: 2rem;
+}
+.page {
+  width: 39rem;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
+  background: var(--bg-header);
+}
+
+header img {
+  margin: 3.2rem 0;
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+}
+
+header h1 {
+  width: 100%;
+  height: 5rem;
+  background: #cbc0d3;
+  text-align: center;
+  font-family: var(--ff-title);
+  font-size: 4rem;
+  line-height: 5rem;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+}
+.card-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.6rem;
+  padding-bottom: 3.5rem;
+  background: var(--bg-main);
+}
+.card {
+  position: relative;
+}
+.card img {
+  animation: imagesdowntop 1s;
+}
+.text-box {
+  margin: 1.8rem 0 1.5rem;
+  text-align: center;
+  width: 30.5rem;
+  animation: textrightleft 700ms;
+}
+.card-holder p {
+  font-family: var(--ff-text);
+  font-size: 20px;
+  line-height: 15px;
+  color: var(--color-text);
+}
+
+.card h2 {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  text-align: center;
+  padding: 0.5rem 2rem;
+  font-family: var(--ff-title);
+  background: var(--bg-card-text);
+  color: var(--color-text-card);
+  border-radius: 20px;
+  font-size: 2.4rem;
+  line-height: 2.4 rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  animation: texttopdown 900ms;
+}
+
+@keyframes texttopdown {
+  0% {
+    transform: translateY(-3rem);
+  }
+
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes imagesdowntop {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes textrightleft {
+  0% {
+    transform: translateX(-7rem);
+  }
+
+  100% {
+    transform: translateX(0rem);
+  }
+}
